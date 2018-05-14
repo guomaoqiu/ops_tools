@@ -2,10 +2,10 @@
 
 #### 1.zabbix agent批量安装
 ```
-tar -xf salt_for_zabbix_agent_install.tar.gz -C /srv/salt
+cp -rf files zabbix_agent.sls /srv/salt/
 ```
-解压到/srv/salt/目录；
-执行 salt "*" state.sls zabbix_agent 即可
+a.执行 salt "*" state.sls zabbix_agent
+b.web页面导入zabbix模板zbx_export_templates.xml
 
 ------
 

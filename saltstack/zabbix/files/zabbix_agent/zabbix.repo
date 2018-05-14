@@ -1,0 +1,6 @@
+[zabbix-3.0]
+name=zabbix repository for 3.0 packages
+baseurl=http://repo.zabbix.com/zabbix/3.0/rhel/6/$basearch/
+gpgcheck=1
+gpgkey=http://repo.zabbix.com/RPM-GPG-KEY-ZABBIX
+enabled=1
