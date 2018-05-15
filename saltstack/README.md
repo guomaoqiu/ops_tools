@@ -4,8 +4,8 @@
 ```
 cp -rf zabbix/files zabbix/zabbix_agent.sls /srv/salt/
 ```
-1. 执行 salt "*" state.sls zabbix_agent
-2. web页面导入zabbix模板zbx_export_templates.xml
+* 执行 salt "*" state.sls zabbix_agent
+* web页面导入zabbix模板zbx_export_templates.xml
 
 ------
 
