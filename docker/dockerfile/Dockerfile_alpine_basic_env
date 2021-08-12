@@ -1,0 +1,17 @@
+# 镜像定义
+FROM python:3.8.11-alpine3.13
+
+# 作者声明
+MAINTAINER guomaoqiu<guomaoqiu@sina.com>
+
+#
+WORKDIR /root/project
+
+# 按需安装
+RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.13/main" > /etc/apk/repositories \
+  && apk add --update --no-cache supervisor iproute2 linux-headers htop bash git mysql-dev build-base jpeg-dev zlib-dev freetype-dev lcms2-dev openjpeg-dev tiff-dev tk-dev tcl-dev wget vim  \
+  && rm -rf /var/cache/apk/* \
+  && rm -rf /root/.cache \
+  && rm -rf /tmp/*
+
+RUN mkdir /etc/supervisor.d
