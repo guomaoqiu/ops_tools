@@ -14,4 +14,11 @@ RUN echo "https://mirror.tuna.tsinghua.edu.cn/alpine/v3.13/main" > /etc/apk/repo
   && rm -rf /root/.cache \
   && rm -rf /tmp/*
 
+# 端口暴露
+# EXPOSE XXXX
+
 RUN mkdir /etc/supervisor.d
+
+# run
+
+CMD ["/usr/bin/supervisord"]
